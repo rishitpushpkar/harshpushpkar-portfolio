@@ -1,0 +1,301 @@
+
+
+.aboutPageContainer{
+    background-color: #000000;
+    margin: 5% auto;
+    width: 80%;
+}
+
+.aboutSection{
+    padding-top: 28rem;
+    position: relative;
+    overflow-x: clip;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+}
+
+.aboutSection h1,.experienceSection h1,.moreThingsSection h1{
+    color: #454545;
+    position: absolute;
+    top: 0;
+    font-size: 25.4rem;
+    font-weight: 900;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.myPicContainer img{
+    margin: 0 auto;
+}
+
+.aboutSection div{
+    z-index: 5;
+    font-size: 3.2rem;
+}
+
+.aboutSection div p{
+    color: #FFFFFF;
+    padding: 3rem;
+    text-align: end;
+}
+
+@media screen and (max-width: 768px) {
+    .aboutSection div p{
+      font-size: 2.4rem;
+      padding: 2rem;
+      text-align: start !important;
+    }
+    .aboutSection h1,.experienceSection h1,.moreThingsSection h1{
+        font-size: 8rem;
+    }
+    .aboutSection,.experienceSection,.moreThingsSection{
+        padding-top: 10rem !important;
+    }
+    
+}
+
+  .experienceSection{
+    color: #FFFFFF;
+    padding-top: 28rem;
+    overflow-x: clip;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    overflow-x: clip;
+    gap: 5rem;
+}
+
+
+.experienceSection article{
+    margin: 4rem 0;
+}
+
+.company_row div h3{
+    font-size: 3.2rem;
+}
+
+.company_row div p{
+    font-size: 2.4rem;
+    font-weight: 200;
+}
+
+
+article div:first-of-type img{
+    margin: 2rem auto;
+}
+
+article div:first-of-type{
+    flex-shrink: 0;
+}
+
+.company_row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+.company_row h2{
+    border-right: 1px solid white;
+    padding-right: 2rem;
+    margin-right: 2rem;
+    font-size: 6rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.company_projects{
+    display: flex;
+    gap: 2rem;
+    margin: 1.5rem 0;
+}
+
+.company_projects ul h4{
+font-size: 2.8rem;
+font-weight: 700;
+}
+
+.company_projects ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    padding-left: 0;
+}
+
+.company_projects ul li{
+    list-style: none;
+    color: #ABABFF;
+    text-decoration-line: underline;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.company_description {
+    font-size: 2.4rem;
+    font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+    .company_row h2{
+        font-size: 2.4rem;
+    }
+    .company_row div h3{
+        font-size: 2.4rem;
+    }
+    .company_row div p{
+        font-size: 1.6rem;
+    }
+    .company_projects ul h4{
+        font-size: 1.6rem;
+    }
+    .company_projects ul li{
+        font-size: 1.6rem;
+    }
+    .company_description {
+        font-size: 1.6rem;
+    }
+
+    .company_projects ul{
+        gap: 0.5rem;
+    }
+    
+}
+
+/* ################################## */
+
+
+
+
+
+.moreThingsSection{
+    color: #FFFFFF;
+    overflow-x: clip;
+    min-height: 100vh;
+    height: auto;
+    padding-top: 28rem;
+    gap: 15vh;
+    position: relative;
+}
+
+.mts_1 div{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.mts_2 div{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    gap:0rem 3.2rem ;
+}
+
+
+.mts_1 div p{
+    font-size: 3.2rem;
+    font-weight: 300;
+    text-align: start;
+}
+
+.mts_2 div p, .mts_3 div p,.mts_4 div p{
+    font-size: 3.2rem;
+    font-weight: 300;
+    text-align: end;
+}
+
+
+.myPic2Container img{
+    margin-right: 9.6rem;
+}
+
+
+
+.mts_2 div .myPic3Container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 980px){
+    article div:first-of-type img{
+        margin: 2rem 0;
+    }
+    .mts_2 div{
+        flex-direction: column-reverse;
+    }
+    .mts_1 div p{
+        font-size: 2.4rem;
+    }
+    .mts_2 div p{
+        font-size: 2.4rem;
+    }
+    .mts_3 div p{
+        padding: 1rem !important;
+        font-size: 2.4rem;
+    }
+    .mts_4 div p{
+        font-size: 2.4rem;
+    }
+    .myPic5Container img{
+        width: 100%;
+    }
+
+}
+@media screen and (max-width: 1264px){
+    .mts_2 div{
+        flex-direction: column-reverse;
+    }
+    
+}
+
+
+.myPic3Container div:first-child  {
+    grid-column: 1/ span 2;
+}
+
+.myPic3Container div:nth-child(2){
+    grid-column: 3/ span 3;
+}
+
+.myPic3Container div:nth-child(3){
+    grid-column: 1/ 6;
+}
+
+.myPic3Container div:nth-child(4){
+    grid-column: 1/ 4;
+  
+}
+
+.myPic3Container div:nth-child(5){
+    grid-column: 4/ 6;
+  
+}
+
+.mts_3 div{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+.mts_3 div p{
+  text-align: start;
+  padding: 4rem;
+}
+
+.mts_1,.mts_2,.mts_3,.mts_4{
+  margin: 10vw 0;
+}
+
+.mts_3 div .myPic4Container{
+    display: flex;
+    flex-direction: column;
+}
+
+.mts_4 div{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+

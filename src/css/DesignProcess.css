@@ -1,0 +1,108 @@
+
+/* ########### Design process css ########### */
+
+.feedback-content{
+    font-size: 2.4rem;
+    font-weight: 300;
+}
+
+.feedback-heading{
+    font-size: 4.8rem;
+    font-weight: 700;
+}
+
+.feedbackContainer{
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 58vw;
+    margin: 0 auto;
+}
+
+.serialNo{
+    width: 7%;;
+    font-size: 60rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 14%);
+    position: absolute;
+    left: -22%;
+}
+
+.designProcess-description{
+    color: white;
+    position: relative;
+    width: 45%; 
+}
+
+.designProcess-video{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    width: max-content;
+}
+
+.video-react-control-bar {
+    display: none ;
+}
+
+.video-react-control-text{
+    display: none;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1300px){
+    .designProcessContainer{
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .designProcessContainer{
+        flex-direction: column;
+        width: 90vw;
+        font-weight: 300;
+        height: auto;
+    
+    }
+.OuterContainer{
+    margin: 10rem 0;
+}
+
+    .designProcess-description{
+        width: 100%;
+        order: 2;
+    }
+    .designProcess-description .designProcess-content{
+        width: 100%;
+        font-size: 2rem;
+    }
+
+    .designProcess-video{
+        width: 100%;
+        order: 1;
+    }
+    .serialNo{
+        position: relative;
+        left: 0%;
+        width: 100%;
+        font-size: 18rem;
+    }
+    
+}
+
+@media screen and (max-width: 700px){
+    .serialNo{
+        font-size: 18rem;
+    }
+
+    .feedback-heading{
+        font-size: 3.2rem;
+    }
+}

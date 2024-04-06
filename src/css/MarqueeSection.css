@@ -1,0 +1,164 @@
+.ticker-tape-container {
+    overflow-x: hidden;
+    display: flex;
+    width: 100%;
+}   
+
+.marqueeSection{
+    position: relative;
+  
+}
+
+.ticker-tape {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    gap: 1rem;
+}
+
+.ticker-tape-2{
+    
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.ticker-tape-2 h2{
+    padding:0 2rem;
+    font-size: 6.5rem;
+    font-weight: 200;
+}
+
+.ticker-tape-2 h3{
+    font-size: 6.5rem;
+    font-weight: 200;
+}
+
+.ticker-tape h1{
+    display: flex;
+    font-size: 25.4rem;
+    font-weight: 900;
+    overflow-y: hidden;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes marquee-2 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes marquee-3 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+
+
+
+
+.ticker-tape {
+    animation-name: marquee;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-direction: normal;
+}
+.ticker-tape-2 {
+    animation-name: marquee-2;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-direction: normal;
+}
+
+
+.movingArrowBox{
+position: absolute;
+bottom: -30%;
+overflow-y: hidden;
+
+}
+
+.clickHereBox{
+    overflow-y: hidden;
+position: absolute;
+bottom: -11%;
+z-index: 10;
+background-color: transparent;
+}
+
+.ticker-tape-arrow {
+    animation-name: marquee-3;
+    animation-duration: 9.5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-direction: normal;
+}
+
+.basic-styling {
+    background-color: #0000FF;
+    padding:0rem 2rem;
+    color: #000000;
+  }
+
+  .starImg{
+    margin: 0 2rem;
+  }
+ 
+  @media screen and (max-width:1300px) {
+    
+.starImg{
+    margin-top: 1.5%;
+    height: 7rem;
+    width: 7rem;
+}
+
+    .ticker-tape-2 h2{
+
+        font-size: 1.8rem;
+ 
+    }
+    
+    .ticker-tape-2 h3{
+        font-size: 1.8rem;
+
+    }
+    
+    .ticker-tape h1{
+        font-size: 7.2rem;
+
+    }
+
+    .movingArrowBox{
+        bottom: -37%;
+     
+        }
+        
+        .clickHereBox{
+        bottom: -14%;
+
+        }
+    
+  }

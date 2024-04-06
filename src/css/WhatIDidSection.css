@@ -1,0 +1,422 @@
+
+.splideElement{
+  background: white;
+  position: relative;
+}
+
+.projectDescriptionContainer .long-paragraph {
+  text-overflow: ellipsis;
+}
+.splide__arrow{
+  display: none !important;
+}
+
+.changeCursorArrowBox{
+  width: 100vw;
+  height: 47rem;
+  overflow-x: clip;
+  position: absolute;
+display: flex;
+justify-content: space-between;
+}
+
+.leftArea , .rightArea{
+  width: 17%;
+  height: 100%;
+  z-index: 10000;
+  background-color: transparent;
+}
+
+.rightArea:hover{
+  cursor: url(../assets/images/right-arrow-svgrepo-com.svg), auto; 
+}
+
+.leftArea:hover{
+  cursor: url(../assets/images/left-arrow-svgrepo-com.svg), auto; 
+}
+
+
+
+
+  .whatIDidSection{
+    position: relative;
+    background-color: white;
+    overflow-x: clip;
+    padding-top: 28rem;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  
+.whatIDidSection h1{
+  color: rgba(0, 0, 0, 0.08);
+  position: absolute;
+  top: 0;
+  left: -95%;
+  font-size: 25.4rem;
+  font-weight: 900;
+  white-space: nowrap;
+  z-index: 1;
+
+}
+  
+  #videoContainer {
+    position: relative;
+    height: auto;
+  }
+
+  .paused-cursor:hover{
+   
+      cursor: url(../assets/images/pause-circle-svgrepo-com.svg), auto; 
+  
+  }
+
+  .playing-cursor:hover{
+   
+      cursor: url(../assets/images/play-circle-svgrepo-com.svg), auto; 
+  
+  }
+  
+  video {
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+   
+  }
+  
+  
+  #multi-card-carousel {
+    background: white;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .splide {
+    padding-right: 0rem;
+    padding-left: 0rem;
+  }
+  
+  .projectDescriptionContainer {
+    margin: 2rem 0;
+    height: auto;
+    display: flex;
+    gap: 6%;
+    justify-content: space-between;
+    color: black;
+  }
+  
+  .projectDescriptionContainer p {
+    display: flex;
+    color: black;
+    font-size: 1.8rem;
+  }
+  
+  .projectDescriptionContainer div ul li {
+    list-style: none;
+
+    font-weight: bold;
+    color: #bfbfbf;
+    font-size: 1.6rem;
+  }
+  .projectDescriptionContainer div ul  {
+padding-left: 0;
+margin: 1rem 0;
+  }
+  
+  .projectDescriptionContainer div ul li span {
+    color: #454545;
+    font-weight: normal;
+  }
+  .projectDescriptionContainer h1 {
+    font-size: 4.8rem;
+    font-weight: bold;
+    position: static;
+    color: #454545;
+  }
+  
+
+  /* ---------------------------------------------BUTTON STYLE--------------------------------------------- */
+  
+  #caseStudyBtn {
+   z-index: 20000 ;
+    background-color: transparent;
+    border: none;
+    position: absolute; 
+    top: 80%;
+    right: -4.5%;
+    font-size: 2rem;
+    font-weight: 600;
+    opacity: 1;
+    visibility: visible;
+    animation:btnOpacity 0.3s cubic-bezier(0.4, 0, 0.6, 1);
+
+  }
+
+  @keyframes btnOpacity {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+    
+  }
+
+  
+  
+  #caseStudyBtn .scene {
+    width: 20em;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #caseStudyBtn .scene .cube {
+    color: #ccc;
+    cursor: pointer;
+    transition: all 0.85s cubic-bezier(0.17, 0.67, 0.14, 0.93);
+    transform-style: preserve-3d;
+    transform-origin: 100% 50%;
+    width: 10em;
+    height: 4em;
+  }
+  
+  #caseStudyBtn .scene .cube:hover {
+    transform: rotateX(-90deg);
+  }
+  
+  #caseStudyBtn .scene .cube .side {
+    box-sizing: border-box;
+    position: absolute;
+    display: inline-block;
+    height: 4em;
+    width: 14em;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 1.3em;
+    font-weight: bold;
+  }
+  
+  #caseStudyBtn .scene .cube .top {
+    background: rgb(255, 255, 255);
+    color: #222229;
+    transform: rotateX(90deg) translate3d(0, 0, 2em);
+    box-shadow: inset 0 0 0 5px #fff;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  #caseStudyBtn .scene .cube .front {
+    background: #0000ff;
+    color: #000;
+    transform: translate3d(0, 0, 2em);
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  /* ---------------------------------------------MEDIA QUERIES--------------------------------------------- */
+  
+  
+  @media screen and (max-width: 1700px){
+    .leftArea , .rightArea{
+
+      height: 95%;
+   
+    }
+  }
+
+    /* ____________________________________________________________1624px____________________________________________________________ */
+    
+    @media screen and (max-width: 1624px){
+      
+      .whatIDidSection h1{ 
+        left: -140%;
+      }
+
+      .leftArea , .rightArea{
+
+        height: 90%;
+     
+      }
+
+      #caseStudyBtn {
+        top: 84%;
+    }
+      
+    }
+
+    @media screen and (max-width: 1500px){
+      
+
+      .leftArea , .rightArea{
+        height: 85%;
+      }
+      
+    }
+
+
+    @media screen and (max-width: 1300px){
+      .leftArea , .rightArea{
+ 
+        height: 35vw;
+
+      }
+      
+    }
+    /* ____________________________________________________________1024px____________________________________________________________ */
+    
+  @media screen and (max-width: 1024px) {
+    .projectDescriptionContainer {
+      flex-direction: column;
+      align-items: start;
+      margin: 2rem 10%;
+    }
+
+  
+    #video {
+      width: 80%;
+    }
+  
+    .projectDescriptionContainer h1 {
+      font-size: 3.6rem;
+      margin-bottom: 1rem;
+    }
+  
+    .projectDescriptionContainer p {
+      font-size: 1.6rem;
+    }
+  
+    .projectDescriptionContainer div ul li {
+      font-size: 1.4rem;
+    }
+  
+
+    #caseStudyBtn {
+      position: absolute; 
+      top: 78%;
+      right: -4.5%;
+      font-size: 2rem;
+      font-weight: 600;
+  
+    }
+    .whatIDidSection h1{
+      
+      left: -250%;
+    
+    }
+
+  }
+
+
+  /* ____________________________________________________________800px____________________________________________________________ */
+  
+
+
+  @media screen and (max-width: 800px) {
+    .projectDescriptionContainer {
+      flex-direction: column;
+      align-items: start;
+    }
+
+    .whatIDidSection {
+      padding-top: 10rem !important;
+    }
+      
+  
+    .projectDescriptionContainer div ul li {
+      font-size: 1.2rem;
+    }
+
+    .projectDescriptionContainer div h1{
+      font-size: 3.6rem;
+    }
+  
+    #caseStudyBtn {
+      position: absolute;
+      bottom: 0%;
+      right: 20%;
+      font-size: 10px;
+    }
+    #videoContainer {
+      position: relative;
+      height: auto;
+    }
+  
+    #video {
+      width: 80%;
+      margin: 0 auto;
+      object-fit: cover;
+      object-position: center;
+      height: 100%;
+    }
+  
+    .whatIDidSection h1{
+      font-size: 8rem;
+     
+    }
+
+  
+  }
+  /* ____________________________________________________________786px____________________________________________________________ */
+  
+  @media screen and (max-width: 768px){
+    .whatIDidSection h1{
+      font-size: 8rem;
+      left: -220%;
+  
+    }
+  
+ 
+  }
+  
+  /* ____________________________________________________________500px____________________________________________________________ */
+  
+
+  @media screen and (max-width: 500px) {
+  
+    #video {
+      height: 100%;
+    }
+  
+    #caseStudyBtn {
+      position: absolute;
+      bottom: -21%;
+      right: 30%;
+      font-size: 10px;
+    }
+  
+    .whatIDidSection h1{
+      left: -350%;
+  
+    }
+    .projectDescriptionContainer{
+      margin: 8rem 10%;
+    }
+  
+    .projectDescriptionContainer p {
+      font-size: 1.4rem;
+    }
+    .projectDescriptionContainer h1 {
+      font-size: 2.8rem;
+    }
+  
+    .projectDescriptionContainer div ul li {
+      font-size: 1.4rem;
+    }
+
+
+
+  }
+
+  @media screen and (max-width: 320px){
+    .whatIDidSection h1{
+    
+      left: -650%;
+  
+    }
+
+
+
+
+  
+  }
+  
