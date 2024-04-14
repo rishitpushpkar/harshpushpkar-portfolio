@@ -8,16 +8,19 @@ import nightPic from "../assets/images/Night_pic.png";
 import sunSetPic from "../assets/images/Lake_sun_set.png";
 import CyclingPic from "../assets/images/Cycling.svg";
 import iceCreamPic from "../assets/images/Icecream.svg";
+import useSlideOnScroll from "../utils/hooks/useSlideOnScroll";
+import { motion } from "framer-motion";
 
 import "../css/AboutPage.css";
 import { experiences } from "../utils/constants/constants";
 
 export default function AboutPage() {
+  useSlideOnScroll();
   return (
     <div className="">
       <div className="aboutPageContainer">
         <section className="aboutSection">
-          <h1>THIS IS ME</h1>
+          <motion.h1 animate={useSlideOnScroll()}>THIS IS ME</motion.h1>
           <div className="row align-items-center ">
             <p className="col-lg-8 text-center text-lg-end order-2 order-lg-1">
               Hello there! I&apos;m <strong>Harsh Pushpkar</strong>, a creative
@@ -32,7 +35,7 @@ export default function AboutPage() {
           </div>
         </section>
         <section className="experienceSection">
-          <h1>EXPERIENCE</h1>
+          <motion.h1 animate={useSlideOnScroll()}>EXPERIENCE</motion.h1>
           {experiences.map((experience, index) => {
             return (
               <article className="row" key={index}>
@@ -68,7 +71,7 @@ export default function AboutPage() {
           })}
         </section>
         <section className="moreThingsSection">
-          <h1>MORE THINGS</h1>
+          <motion.h1 animate={useSlideOnScroll()}>MORE THINGS</motion.h1>
           <article className="mts_1">
             <div className="row">
               <div className="myPic2Container col-lg-4">

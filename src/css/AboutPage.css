@@ -19,14 +19,24 @@
     color: #454545;
     position: absolute;
     top: 0;
-    font-size: 25.4rem;
+    left: -1rem;
+    font-size: 20.4rem;
     font-weight: 900;
     white-space: nowrap;
     z-index: 1;
 }
 
+.experienceSection h1{
+    left: -65%;
+}
+
+.moreThingsSection h1{
+    left: -180%;
+}
+
 .myPicContainer img{
     margin: 0 auto;
+    width: 100%;
 }
 
 .aboutSection div{

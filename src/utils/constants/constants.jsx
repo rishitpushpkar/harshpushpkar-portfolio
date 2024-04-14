@@ -1,11 +1,19 @@
+// Design Process Resources
 import understandVideo from "../../assets/videos/1.mp4";
 import exploreVideo from "../../assets/videos/2.mp4";
 import materializeVideo from "../../assets/videos/3.mp4";
 import feedbackVideo from "../../assets/videos/4.mp4";
+
+// Experience Resources
 import aerologix_logo from "../../assets/images/Aerologix_logo.svg";
 import kabadiwala_logo from "../../assets/images/Kabadiwala_logo.svg";
 import pushpkar_studios_logo from "../../assets/images/PushpkarStudio_logo.svg";
 
+// Project Resources
+import projectVideo1 from "../../assets/videos/Amaps.mp4";
+import projectVideo2 from "../../assets/videos/CypherDesign.mp4";
+
+// ############################################### DESIGN PROCESS SECTION ##################################################
 const designProcessList = [
   {
     title: "UNDERSTAND",
@@ -96,31 +104,103 @@ const experiences = [
 const projects = [
   {
     title: "AerologixMaps",
-    type: "UI/UX design",
+    type: "UI/UX design | Web | SaaS | B2B",
     association: "Aerologix, Full-time Employee",
     duration: "3 Months",
     year: "2023",
     description:
       "Aerologix is a Sydney-based drone start-up that provides a marketplace for clients to locate their local drone pilot to complete aerial imagery projects. The company uses a patented algorithm and geolocation to match clients with skilled and qualified drone pilots. Collaborating seamlessly with cross-functional teams, I crafted intuitive user interfaces and user experiences, ensuring alignment with business goals. My role extended to prototyping, usability testing, and guiding development teams for seamless implementation. Additionally, I played a key role in refining the design process, contributing to enhanced efficiency and product excellence.",
+    video: projectVideo1,
   },
   {
-    title: "AerologixMaps",
-    type: "UI/UX design",
-    association: "Aerologix, Full-time Employee",
-    duration: "3 Months",
-    year: "2023",
+    title: "Cypher Design",
+    type: "UI/UX design | Mobile & Web | SaaS",
+    association: "The Kabadiwala, Full-time",
+    duration: "2 Months",
+    year: "2021",
     description:
-      "Aerologix is a Sydney-based drone start-up that provides a marketplace for clients to locate their local drone pilot to complete aerial imagery projects. The company uses a patented algorithm and geolocation to match clients with skilled and qualified drone pilots. Collaborating seamlessly with cross-functional teams, I crafted intuitive user interfaces and user experiences, ensuring alignment with business goals. My role extended to prototyping, usability testing, and guiding development teams for seamless implementation. Additionally, I played a key role in refining the design process, contributing to enhanced efficiency and product excellence.",
+      "Cypher, a design system meticulously crafted for Scrappr, serves as a catalyst for creating user-friendly, straightforward, scalable, responsive, and consistently designed user interfaces. With the integration of pre-built components, the arduous task of reconstructing fundamental UI elements is substantially diminished, paving the way for accelerated product development. This efficiency allows our team to redirect their focus towards refining user experiences and tackling complex problem-solving, ultimately lifting the overall value of the product. ",
+    video: projectVideo2,
   },
   {
-    title: "AerologixMaps",
-    type: "UI/UX design",
-    association: "Aerologix, Full-time Employee",
-    duration: "3 Months",
-    year: "2023",
+    title: "Apron",
+    type: "Product Design | Mobile",
+    collaboration: "Ronak Jain (Brand & Visual Designer)",
+    duration: "2 Months",
+    year: "2024",
     description:
-      "Aerologix is a Sydney-based drone start-up that provides a marketplace for clients to locate their local drone pilot to complete aerial imagery projects. The company uses a patented algorithm and geolocation to match clients with skilled and qualified drone pilots. Collaborating seamlessly with cross-functional teams, I crafted intuitive user interfaces and user experiences, ensuring alignment with business goals. My role extended to prototyping, usability testing, and guiding development teams for seamless implementation. Additionally, I played a key role in refining the design process, contributing to enhanced efficiency and product excellence.",
+      "Apron connects travelers and individuals exploring new destinations with a temporary solution for their culinary needs. For individuals far from home, it provides access to kitchens for rent, enabling them to cook meals aligned with their dietary preferences and tastes. On the other side, homeowners can monetize their kitchen spaces by offering them for temporary rentals, creating a seamless and mutually beneficial arrangement. ",
+    video: projectVideo2,
   },
 ];
 
-export { designProcessList, experiences, projects };
+// ############################################### ALL PROJECTS ##################################################
+
+const allProjects = [
+  ...projects,
+  {
+    title: "The Kabadiwala",
+    type: "UI/UX design | Mobile & Web | SaaS | B2C",
+    association: "The Kabadiwala, Full-time",
+    year: "2023",
+    description:
+      "The Kabadiwala, developed by ASAR Green Kabadi Pvt. Ltd., embodies innovation in waste management through a sophisticated SaaS (Software as a Service) platform. As a key member of the team, I spearheaded the creation and design of web pages while crafting compelling visual content including images, videos, graphics, and animations. My role extended beyond mere design; I fostered seamless collaboration across departments, ensuring our output consistently met the highest standards of quality and coherence.",
+    video: projectVideo1,
+  },
+  {
+    title: "Zero Centre",
+    type: "Product/UX/UI Design | Mobile | B2B",
+    duration: "3 Months",
+    year: "2022",
+    description:
+      "Zero Centre is the ultimate app for effortless scrap inventory management. With its intuitive interface, Zero Centre empowers you to oversee multiple centers, manage personnel and roles, handle transactions, streamline logistics, and generate seamless billing and invoicing. ",
+    video: projectVideo1,
+  },
+  {
+    title: "Zero EPR",
+    type: "UI/UX Design | Web (SaaS)",
+    duration: "3 Months",
+    year: "2021",
+    description:
+      "Zero EPR is a SaaS platform providing comprehensive EPR compliance management solutions. Specializing in handling various mandatory waste materials, Zero EPR facilitates seamless end-to-end management processes. Their services streamline waste management, catalyzing economic growth while fostering the transition towards a circular economy.",
+    video: projectVideo1,
+  },
+  {
+    title: "Mathur Sweets & Snacks",
+    type: "UI/UX design | Mobile",
+    duration: "1 Week",
+    year: "2020",
+    description:
+      "As a part of my UX Design course (From Google), this project helped me understand the UX design fundamentals and key concepts. Mathur Sweets and Snacks (MSS) stands as a prominent fast-food chain in city, boasting five strategically positioned branches in the bustling commercial hubs of the city. With options for in-store dining and convenient door-to-door delivery via phone orders, MSS ensures that its tantalizing offerings are accessible to all. my goal was to design an app for MSS that allows users to book orders and track them live easily.",
+    video: projectVideo1,
+  },
+  {
+    title: "Legacy Sport Academy",
+    type: "Logo, Brand, Graphic Design",
+    duration: "2 Months",
+    year: "2024",
+    description:
+      "Legacy Sports Club is a premier sports academy dedicated to nurturing talent and fostering a culture of excellence in sports. Situated amidst lush greenery, our state-of-the-art facility boasts a range of world-class amenities, including a futsal ground for fast-paced action, a cricket school for honing batting and bowling skills, and a football ground where dreams take flight with every kick. My role was to design their logo and branding and other designs like banners and social media posts.",
+    video: projectVideo1,
+  },
+  {
+    title: "AICARE",
+    type: "UI/UX Research & Design | Web",
+    duration: "1 Week",
+    year: "2023",
+    description:
+      "Aicare is a Healthcare Analytics software powered by Artificial Intelligence. This software helps healthcare professionals and stakeholders to feed, clean, and analyze healthcare data to get necessary actionable insights. ",
+    video: projectVideo1,
+  },
+  {
+    title: "Nuetek",
+    type: "UI/UX Design | Mobile",
+    duration: "1 Week",
+    year: "2020",
+    description:
+      "Nuetek Electronics is a leading electronics manufacturer, renowned for its diverse range of products including smartphones, laptops, televisions, and music systems. With departments covering production, design, finance, distribution, and corporate management, Nuetek operates seamlessly across multiple markets. Recognizing their environmental responsibility, the company has intensified its focus on sustainability, embracing principles of the circular economy, and enhancing corporate social responsibility (CSR) policies. Adhering to governmental regulations such as Extended Producer Responsibility (EPR), Nuetek maintains stringent operational standards to mitigate environmental impact.",
+    video: projectVideo1,
+  },
+];
+
+export { designProcessList, experiences, projects, allProjects };

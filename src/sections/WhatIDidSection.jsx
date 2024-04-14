@@ -2,11 +2,11 @@ import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import { motion } from "framer-motion";
 import "@splidejs/react-splide/css/core";
 import "@splidejs/react-splide/css/sea-green";
-import projectVideo1 from "../assets/videos/Amaps.mp4";
 import "../css/WhatIDidSection.css";
 import { projects } from "../utils/constants/constants";
 import useSlideOnScroll from "../utils/hooks/useSlideOnScroll";
 import { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 
 export default function WhatIDidSection() {
   useSlideOnScroll();
@@ -129,19 +129,23 @@ export default function WhatIDidSection() {
                   }`}
                   onClick={() => handleVideoClick(index)}
                 >
-                  <video
-                    ref={(video) => (videoRefs.current[index] = video)}
-                    loop
-                    muted
-                    id={`video-${index}`}
-                    autoPlay={activeSlides[index]}
-                  >
-                    <source src={projectVideo1} type="video/mp4" />
-                  </video>
-
+                  {project.video && (
+                    <video
+                      ref={(video) => (videoRefs.current[index] = video)}
+                      loop
+                      muted
+                      id={`video-${index}`}
+                      autoPlay={activeSlides[index]}
+                    >
+                      <source src={project.video} type="video/mp4" />
+                    </video>
+                  )}
+                  {project.image && (
+                    <img src={project.image} alt="Project Image" />
+                  )}
                   {activeSlideIndex === index && (
                     <button id="caseStudyBtn">
-                      <a href={activeSlideLink}>
+                      <Link to={activeSlideLink}>
                         <div className="scene">
                           <div className="cube">
                             <span className="side top">
@@ -152,7 +156,7 @@ export default function WhatIDidSection() {
                             </span>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </button>
                   )}
                 </div>
@@ -164,9 +168,16 @@ export default function WhatIDidSection() {
                       <li>
                         Type of Project <span>{project.type}</span>
                       </li>
-                      <li>
-                        Association <span>{project.association}</span>
-                      </li>
+                      {project.association && (
+                        <li>
+                          Association <span>{project.association}</span>
+                        </li>
+                      )}
+                      {project.collaboration && (
+                        <li>
+                          Collaboration <span>{project.collaboration}</span>
+                        </li>
+                      )}
                       <li>
                         Project Duration <span>{project.duration}</span>
                       </li>

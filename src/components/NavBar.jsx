@@ -29,7 +29,7 @@ export default function NavBar() {
             <div className="wee"></div>
           </li>
           <li className="menu-item">
-            <Link to="/contact">My Work</Link>
+            <Link to="/work">My Work</Link>
             <div className="wee"></div>
           </li>
         </ul>

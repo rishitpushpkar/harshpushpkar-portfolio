@@ -2,6 +2,7 @@ import "../css/WhatIDoSection.css";
 import { motion } from "framer-motion";
 import useMagicalText from "../utils/hooks/useMagicalText";
 import useSlideOnScroll from "../utils/hooks/useSlideOnScroll";
+import { Link } from "react-router-dom";
 
 export default function WhatIDoSection() {
   const targetRef = useMagicalText();
@@ -37,12 +38,14 @@ export default function WhatIDoSection() {
         <div></div>
         <div>
           <button>
-            <div className="scene">
-              <div className="cube">
-                <span className="side top">WANNA KNOW MORE?</span>
-                <span className="side front">WANNA KNOW MORE?</span>
+            <Link to="/about">
+              <div className="scene">
+                <div className="cube">
+                  <span className="side top">WANNA KNOW MORE?</span>
+                  <span className="side front">WANNA KNOW MORE?</span>
+                </div>
               </div>
-            </div>
+            </Link>
           </button>
         </div>
       </div>

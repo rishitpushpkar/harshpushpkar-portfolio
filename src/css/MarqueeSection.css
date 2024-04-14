@@ -6,6 +6,7 @@
 
 .marqueeSection{
     position: relative;
+    cursor: pointer;
   
 }
 

@@ -1,12 +1,18 @@
 import "../css/MarqueeSection.css";
 import star from "../assets/images/star.svg";
+import { useNavigate } from "react-router-dom";
 
 export default function MarqueeSection() {
+  const navigate = useNavigate();
   const noOfArrows = Array.from({ length: 100 }, (value, index) => index);
   const noOfClickHere = Array.from({ length: 8 }, (value, index) => index);
 
+  const moreProjectHandler = () => {
+    navigate("/projects");
+  };
+
   return (
-    <section className="marqueeSection">
+    <section className="marqueeSection" onClick={moreProjectHandler}>
       <div className="ticker-tape-container basic-styling">
         <div className="ticker-tape">
           <h1>
