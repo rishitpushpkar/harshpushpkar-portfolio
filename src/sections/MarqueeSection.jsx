@@ -8,7 +8,7 @@ export default function MarqueeSection() {
   const noOfClickHere = Array.from({ length: 8 }, (value, index) => index);
 
   const moreProjectHandler = () => {
-    navigate("/projects");
+    navigate("/work");
   };
 
   return (

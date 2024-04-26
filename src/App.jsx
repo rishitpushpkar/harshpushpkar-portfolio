@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar";
 import AboutPage from "./pages/AboutPage";
 import Footer from "./components/Footer";
 import AllProjectPage from "./pages/AllProjectPage";
+import ScrollToTop from "./utils/ScrollToTop";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/work" element={<AllProjectPage />} />
         </Routes>
         <Footer />
+        <ScrollToTop />
       </BrowserRouter>
     </>
   );

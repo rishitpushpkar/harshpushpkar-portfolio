@@ -1,4 +1,5 @@
 import "../css/Footer.css";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const myContactInfo = {
@@ -13,7 +14,13 @@ export default function Footer() {
     <footer>
       <p>Write me a line</p>
       <span>
-        <a>{myContactInfo.email}</a>
+        <Link
+          to={`https://mail.google.com/mail/?view=cm&fs=1&to=${myContactInfo.email}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {myContactInfo.email}
+        </Link>
       </span>
       <div className="contactLinksContainer">
         <ul>

@@ -17,8 +17,8 @@ import { experiences } from "../utils/constants/constants";
 export default function AboutPage() {
   useSlideOnScroll();
   return (
-    <div className="">
-      <div className="aboutPageContainer">
+    <>
+      <div className="aboutPageContainer ">
         <section className="aboutSection">
           <motion.h1 animate={useSlideOnScroll()}>THIS IS ME</motion.h1>
           <div className="row align-items-center ">
@@ -149,6 +149,6 @@ export default function AboutPage() {
           </article>
         </section>
       </div>
-    </div>
+    </>
   );
 }
