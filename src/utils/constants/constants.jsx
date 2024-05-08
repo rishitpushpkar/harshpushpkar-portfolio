@@ -111,6 +111,8 @@ const projects = [
     description:
       "Aerologix is a Sydney-based drone start-up that provides a marketplace for clients to locate their local drone pilot to complete aerial imagery projects. The company uses a patented algorithm and geolocation to match clients with skilled and qualified drone pilots. Collaborating seamlessly with cross-functional teams, I crafted intuitive user interfaces and user experiences, ensuring alignment with business goals. My role extended to prototyping, usability testing, and guiding development teams for seamless implementation. Additionally, I played a key role in refining the design process, contributing to enhanced efficiency and product excellence.",
     video: projectVideo1,
+    buttonLabel: "See Project",
+    btnLink: "https://www.aerologixmaps.com/",
   },
   {
     title: "Cypher Design",
@@ -121,6 +123,8 @@ const projects = [
     description:
       "Cypher, a design system meticulously crafted for Scrappr, serves as a catalyst for creating user-friendly, straightforward, scalable, responsive, and consistently designed user interfaces. With the integration of pre-built components, the arduous task of reconstructing fundamental UI elements is substantially diminished, paving the way for accelerated product development. This efficiency allows our team to redirect their focus towards refining user experiences and tackling complex problem-solving, ultimately lifting the overall value of the product. ",
     video: projectVideo2,
+    buttonLabel: "See Project",
+    btnLink: "https://cypher.gozero.ooo/",
   },
   {
     title: "Apron",
@@ -131,6 +135,9 @@ const projects = [
     description:
       "Apron connects travelers and individuals exploring new destinations with a temporary solution for their culinary needs. For individuals far from home, it provides access to kitchens for rent, enabling them to cook meals aligned with their dietary preferences and tastes. On the other side, homeowners can monetize their kitchen spaces by offering them for temporary rentals, creating a seamless and mutually beneficial arrangement. ",
     video: projectVideo2,
+    buttonLabel: "See Case Study",
+    btnLink:
+      "https://www.figma.com/proto/MossOx6VgYNV1apyOJqaAd/Apron---Product-Design-%26-UX-Case-Study?type=design&node-id=474-7737&t=0BlcLeW52It18sy0-0&scaling=contain&page-id=474%3A6366&starting-point-node-id=474%3A6367",
   },
 ];
 
@@ -146,6 +153,8 @@ const allProjects = [
     description:
       "The Kabadiwala, developed by ASAR Green Kabadi Pvt. Ltd., embodies innovation in waste management through a sophisticated SaaS (Software as a Service) platform. As a key member of the team, I spearheaded the creation and design of web pages while crafting compelling visual content including images, videos, graphics, and animations. My role extended beyond mere design; I fostered seamless collaboration across departments, ensuring our output consistently met the highest standards of quality and coherence.",
     video: projectVideo1,
+    buttonLabel: "Visit",
+    btnLink: "https://www.thekabadiwala.com/",
   },
   {
     title: "Zero Centre",
@@ -155,6 +164,9 @@ const allProjects = [
     description:
       "Zero Centre is the ultimate app for effortless scrap inventory management. With its intuitive interface, Zero Centre empowers you to oversee multiple centers, manage personnel and roles, handle transactions, streamline logistics, and generate seamless billing and invoicing. ",
     video: projectVideo1,
+    buttonLabel: "See Project",
+    btnLink:
+      "https://play.google.com/store/apps/details?id=ooo.gozero.centre&hl=en_IN&gl=US&pli=1",
   },
   {
     title: "Zero EPR",
@@ -164,6 +176,8 @@ const allProjects = [
     description:
       "Zero EPR is a SaaS platform providing comprehensive EPR compliance management solutions. Specializing in handling various mandatory waste materials, Zero EPR facilitates seamless end-to-end management processes. Their services streamline waste management, catalyzing economic growth while fostering the transition towards a circular economy.",
     video: projectVideo1,
+    buttonLabel: "See Project",
+    btnLink: "https://www.scrapr.app/epr-calculator",
   },
   {
     title: "Mathur Sweets & Snacks",
@@ -173,6 +187,9 @@ const allProjects = [
     description:
       "As a part of my UX Design course (From Google), this project helped me understand the UX design fundamentals and key concepts. Mathur Sweets and Snacks (MSS) stands as a prominent fast-food chain in city, boasting five strategically positioned branches in the bustling commercial hubs of the city. With options for in-store dining and convenient door-to-door delivery via phone orders, MSS ensures that its tantalizing offerings are accessible to all. my goal was to design an app for MSS that allows users to book orders and track them live easily.",
     video: projectVideo1,
+    buttonLabel: "See Case Study",
+    btnLink:
+      "https://drive.google.com/file/d/1ueZpEMvWGOEZoyuZ1-l2Zb6zfA317v3I/view",
   },
   {
     title: "Legacy Sport Academy",
@@ -182,6 +199,8 @@ const allProjects = [
     description:
       "Legacy Sports Club is a premier sports academy dedicated to nurturing talent and fostering a culture of excellence in sports. Situated amidst lush greenery, our state-of-the-art facility boasts a range of world-class amenities, including a futsal ground for fast-paced action, a cricket school for honing batting and bowling skills, and a football ground where dreams take flight with every kick. My role was to design their logo and branding and other designs like banners and social media posts.",
     video: projectVideo1,
+    buttonLabel: "Visit",
+    btnLink: "https://www.instagram.com/legacy_sports_club/",
   },
   {
     title: "AICARE",
@@ -191,6 +210,9 @@ const allProjects = [
     description:
       "Aicare is a Healthcare Analytics software powered by Artificial Intelligence. This software helps healthcare professionals and stakeholders to feed, clean, and analyze healthcare data to get necessary actionable insights. ",
     video: projectVideo1,
+    buttonLabel: "See Research Study",
+    btnLink:
+      "https://harshpushpkar.notion.site/AICARE-3c1b6c92d19f4e1eb7457ac0141337b5",
   },
   {
     title: "Nuetek",
@@ -200,6 +222,9 @@ const allProjects = [
     description:
       "Nuetek Electronics is a leading electronics manufacturer, renowned for its diverse range of products including smartphones, laptops, televisions, and music systems. With departments covering production, design, finance, distribution, and corporate management, Nuetek operates seamlessly across multiple markets. Recognizing their environmental responsibility, the company has intensified its focus on sustainability, embracing principles of the circular economy, and enhancing corporate social responsibility (CSR) policies. Adhering to governmental regulations such as Extended Producer Responsibility (EPR), Nuetek maintains stringent operational standards to mitigate environmental impact.",
     video: projectVideo1,
+    buttonLabel: "See Case Study",
+    btnLink:
+      "https://harshpushpkar.notion.site/Nuetek-bcc2c58c8c5245b4839680a2bb5cfc1b",
   },
 ];
 

@@ -10,25 +10,44 @@ import CyclingPic from "../assets/images/Cycling.svg";
 import iceCreamPic from "../assets/images/Icecream.svg";
 import useSlideOnScroll from "../utils/hooks/useSlideOnScroll";
 import { motion } from "framer-motion";
-
+import useMagicalText from "../utils/hooks/useMagicalText";
+import { useRef } from "react";
 import "../css/AboutPage.css";
 import { experiences } from "../utils/constants/constants";
 
 export default function AboutPage() {
+  const firstParagraphRef = useRef(null);
+  const secondParagraphRef = useRef(null);
+  const thirdParagraphRef = useRef(null);
+  const forthParagraphRef = useRef(null);
+  const fifthParagraphRef = useRef(null);
+
+  useMagicalText([
+    firstParagraphRef,
+    secondParagraphRef,
+    thirdParagraphRef,
+    forthParagraphRef,
+    fifthParagraphRef,
+  ]);
   useSlideOnScroll();
+
   return (
     <>
       <div className="aboutPageContainer ">
         <section className="aboutSection">
           <motion.h1 animate={useSlideOnScroll()}>THIS IS ME</motion.h1>
           <div className="row align-items-center ">
-            <p className="col-lg-8 text-center text-lg-end order-2 order-lg-1">
+            <motion.p
+              className="col-lg-8 text-center text-lg-end order-2 order-lg-1 "
+              data-splitting="words"
+              ref={firstParagraphRef}
+            >
               Hello there! I&apos;m <strong>Harsh Pushpkar</strong>, a creative
               soul hailing from the vibrant city of Bhopal, the heart of Madhya
               Pradesh. I embarked on my journey by graduating in Mechanical
               Engineering in 2019, setting the stage for a dynamic career that
               seamlessly blends technology and creativity.
-            </p>
+            </motion.p>
             <div className="col-lg-4 myPicContainer order-1 order-lg-2">
               <img src={mypic} alt="My Picture" />
             </div>
@@ -72,7 +91,11 @@ export default function AboutPage() {
         </section>
         <section className="moreThingsSection">
           <motion.h1 animate={useSlideOnScroll()}>MORE THINGS</motion.h1>
-          <article className="mts_1">
+          <motion.article
+            className="mts_1"
+            data-splitting="words"
+            ref={secondParagraphRef}
+          >
             <div className="row">
               <div className="myPic2Container col-lg-4">
                 <img src={mypic_2} alt="My Picture 2" />
@@ -87,8 +110,12 @@ export default function AboutPage() {
                 and Coursera certification in User Experience Design
               </p>
             </div>
-          </article>
-          <article className="mts_2">
+          </motion.article>
+          <motion.article
+            className="mts_2"
+            data-splitting="words"
+            ref={thirdParagraphRef}
+          >
             <div>
               <p>
                 What sets me apart is not just my technical prowess, but my
@@ -116,8 +143,12 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
-          </article>
-          <article className="mts_3">
+          </motion.article>
+          <motion.article
+            className="mts_3 "
+            data-splitting="words"
+            ref={forthParagraphRef}
+          >
             <div className="row">
               <div className="myPic4Container col-lg-4">
                 <img src={sunSetPic} alt="Sun Set" />
@@ -133,8 +164,12 @@ export default function AboutPage() {
                 creativity.
               </p>
             </div>
-          </article>
-          <article className="mts_4">
+          </motion.article>
+          <motion.article
+            className="mts_4"
+            data-splitting="words"
+            ref={fifthParagraphRef}
+          >
             <div className="row">
               <p className="col-lg-8 order-2 order-lg-1">
                 And yes, I do have a sweet tooth—I find solace in the world of
@@ -146,7 +181,7 @@ export default function AboutPage() {
                 <img src={iceCreamPic} alt="Ice Cream" />
               </div>
             </div>
-          </article>
+          </motion.article>
         </section>
       </div>
     </>

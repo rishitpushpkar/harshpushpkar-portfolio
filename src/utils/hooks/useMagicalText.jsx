@@ -2,26 +2,21 @@ import { useEffect, useRef } from "react";
 import Splitting from "splitting";
 import { gsap } from "gsap";
 
-const useMagicalText = () => {
-  const animationTriggeredRef = useRef(false);
-  const targetRef = useRef(null);
+const useMagicalText = (targetRefs) => {
+  const animationTriggeredRefs = useRef(Array(targetRefs.length).fill(false));
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && !animationTriggeredRef.current) {
-          // Run the animation only if it hasn't been triggered before and the target is in view
-          if (targetRef.current) {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting && !animationTriggeredRefs.current[index]) {
+          if (targetRefs[index].current) {
             Splitting();
 
-            // GSAP timeline for animations
             const tl = gsap.timeline();
 
-            // Animation for the words within the <p> element
             tl.fromTo(
-              "p .word",
+              targetRefs[index].current.querySelectorAll(".word"),
               {
-                // Initial state
                 x: "random(-100, 100)",
                 y: "random(-100, 100)",
                 rotate: "random(-90, 90)",
@@ -29,7 +24,6 @@ const useMagicalText = () => {
                 opacity: 0,
               },
               {
-                // Final state
                 x: 0,
                 y: 0,
                 rotate: 0,
@@ -44,23 +38,24 @@ const useMagicalText = () => {
               "-=1"
             );
 
-            // Set the flag to true to indicate that the animation has been triggered
-            animationTriggeredRef.current = true;
+            animationTriggeredRefs.current[index] = true;
           }
         }
       });
     });
 
-    if (targetRef.current) {
-      observer.observe(targetRef.current);
-    }
+    targetRefs.forEach((ref) => {
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
+    });
 
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [targetRefs]);
 
-  return targetRef; // Return the ref object
+  return targetRefs;
 };
 
 export default useMagicalText;

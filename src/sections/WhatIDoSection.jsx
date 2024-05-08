@@ -3,11 +3,12 @@ import { motion } from "framer-motion";
 import useMagicalText from "../utils/hooks/useMagicalText";
 import useSlideOnScroll from "../utils/hooks/useSlideOnScroll";
 import { Link } from "react-router-dom";
+import { useRef } from "react";
 
 export default function WhatIDoSection() {
-  const targetRef = useMagicalText();
+  const paragraphRef = useRef(null);
   // ##############Text Animation################
-  useMagicalText();
+  useMagicalText([paragraphRef]);
   // ##############Scroll LInked Animation################
   useSlideOnScroll();
   return (
@@ -15,7 +16,7 @@ export default function WhatIDoSection() {
       <motion.h1 animate={useSlideOnScroll()}>WHAT I DO</motion.h1>
       <article>
         <div>
-          <motion.p data-splitting="words" ref={targetRef}>
+          <motion.p data-splitting="words" ref={paragraphRef}>
             I Design the look and feel (UI)
             <br />
             of a digital product (Product Design)

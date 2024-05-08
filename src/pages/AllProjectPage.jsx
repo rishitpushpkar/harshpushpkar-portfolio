@@ -1,6 +1,7 @@
 import { allProjects } from "../utils/constants/constants";
 import "../css/AllProject.css";
 import { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 
 export default function AllProjectPage() {
   const [isCursorPaused, setIsCursorPaused] = useState(false);
@@ -51,6 +52,21 @@ export default function AllProjectPage() {
                 {project.image && (
                   <img src={project.image} alt="Project Image" />
                 )}
+
+                <button id="caseStudyBtn">
+                  <Link to={project.btnLink}>
+                    <div className="scene">
+                      <div className="cube">
+                        <span className="side top">
+                          {project.buttonLabel} &gt;&gt;&gt;
+                        </span>
+                        <span className="side front">
+                          {project.buttonLabel} &gt;&gt;&gt;
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                </button>
               </div>
               <article className="projectDescriptionContainer">
                 <div>

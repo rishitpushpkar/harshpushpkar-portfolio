@@ -68,6 +68,7 @@
   .experienceSection{
     color: #FFFFFF;
     padding-top: 28rem;
+margin-bottom: 10vw;
     overflow-x: clip;
     height: auto;
     min-height: 100vh;
@@ -229,37 +230,7 @@ font-weight: 700;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
-@media screen and (max-width: 980px){
-    article div:first-of-type img{
-        margin: 2rem 0;
-    }
-    .mts_2 div{
-        flex-direction: column-reverse;
-    }
-    .mts_1 div p{
-        font-size: 2.4rem;
-    }
-    .mts_2 div p{
-        font-size: 2.4rem;
-    }
-    .mts_3 div p{
-        padding: 1rem !important;
-        font-size: 2.4rem;
-    }
-    .mts_4 div p{
-        font-size: 2.4rem;
-    }
-    .myPic5Container img{
-        width: 100%;
-    }
 
-}
-@media screen and (max-width: 1264px){
-    .mts_2 div{
-        flex-direction: column-reverse;
-    }
-    
-}
 
 
 .myPic3Container div:first-child  {
@@ -295,7 +266,11 @@ font-weight: 700;
 }
 
 .mts_1,.mts_2,.mts_3,.mts_4{
-  margin: 10vw 0;
+  margin: 15vw 0;
+}
+
+.mts_1{
+    margin-top: 5vw;
 }
 
 .mts_3 div .myPic4Container{
@@ -309,3 +284,36 @@ font-weight: 700;
     align-items: center;  
 }
 
+
+
+@media screen and (max-width: 980px){
+    article div:first-of-type img{
+        margin: 2rem 0;
+    }
+    .mts_2 div{
+        flex-direction: column-reverse;
+    }
+    .mts_1 div p{
+        font-size: 2.4rem;
+    }
+    .mts_2 div p{
+        font-size: 2.4rem;
+    }
+    .mts_3 div p{
+        padding: 1rem !important;
+        font-size: 2.4rem;
+    }
+    .mts_4 div p{
+        font-size: 2.4rem;
+    }
+    .myPic5Container img{
+        width: 100%;
+    }
+
+}
+@media screen and (max-width: 1264px){
+    .mts_2 div{
+        flex-direction: column-reverse;
+    }
+    
+}

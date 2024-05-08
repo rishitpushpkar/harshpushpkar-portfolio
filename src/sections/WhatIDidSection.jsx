@@ -20,9 +20,9 @@ export default function WhatIDidSection() {
 
   // Define the links for each slide
   const slideLinks = [
-    "https://aurooba.com/ticker-tape-marquee-css/",
-    "https://codepen.io/sarojpunde/pen/dyOWzzW",
-    "slide3",
+    "https://www.aerologixmaps.com/",
+    "https://cypher.gozero.ooo/",
+    "https://www.figma.com/proto/MossOx6VgYNV1apyOJqaAd/Apron---Product-Design-%26-UX-Case-Study?type=design&node-id=474-7737&t=0BlcLeW52It18sy0-0&scaling=contain&page-id=474%3A6366&starting-point-node-id=474%3A6367",
     // Add more links if needed
   ];
 
@@ -149,10 +149,10 @@ export default function WhatIDidSection() {
                         <div className="scene">
                           <div className="cube">
                             <span className="side top">
-                              SEE CASE STUDY &gt;&gt;&gt;
+                              {project.buttonLabel} &gt;&gt;&gt;
                             </span>
                             <span className="side front">
-                              SEE CASE STUDY &gt;&gt;&gt;
+                              {project.buttonLabel} &gt;&gt;&gt;
                             </span>
                           </div>
                         </div>

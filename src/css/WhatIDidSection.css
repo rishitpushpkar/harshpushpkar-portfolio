@@ -28,11 +28,11 @@ justify-content: space-between;
 }
 
 .rightArea:hover{
-  cursor: url(../assets/images/right-arrow-svgrepo-com.svg), auto; 
+  cursor: url(../assets/images/Right.png), auto; 
 }
 
 .leftArea:hover{
-  cursor: url(../assets/images/left-arrow-svgrepo-com.svg), auto; 
+  cursor: url(../assets/images/Left.png), auto; 
 }
 
 
@@ -67,13 +67,13 @@ justify-content: space-between;
 
   .paused-cursor:hover{
    
-      cursor: url(../assets/images/pause-circle-svgrepo-com.svg), auto; 
+      cursor: url(../assets/images/Pause.png), auto; 
   
   }
 
   .playing-cursor:hover{
    
-      cursor: url(../assets/images/play-circle-svgrepo-com.svg), auto; 
+      cursor: url(../assets/images/Play.png), auto; 
   
   }
   
