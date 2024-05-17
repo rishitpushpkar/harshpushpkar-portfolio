@@ -25,16 +25,24 @@ export default function Footer() {
       <div className="contactLinksContainer">
         <ul>
           <li className="position-relative">
-            <a href={myContactInfo.linkedin}>Linkedin</a>
+            <a href={myContactInfo.linkedin} target="_blank">
+              Linkedin
+            </a>
           </li>
           <li className="position-relative">
-            <a href={myContactInfo.behance}>Behance</a>
+            <a href={myContactInfo.behance} target="_blank">
+              Behance
+            </a>
           </li>
           <li className="position-relative">
-            <a href={myContactInfo.twitter}>Twitter</a>
+            <a href={myContactInfo.twitter} target="_blank">
+              Twitter
+            </a>
           </li>
           <li className="position-relative">
-            <a href={myContactInfo.instagram}>Instagram</a>
+            <a href={myContactInfo.instagram} target="_blank">
+              Instagram
+            </a>
           </li>
         </ul>
         <p>Copyright@ 2024 Harsh Pushpkar. All rights reserved.</p>

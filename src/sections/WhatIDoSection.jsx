@@ -17,17 +17,17 @@ export default function WhatIDoSection() {
       <article>
         <div>
           <motion.p data-splitting="words" ref={paragraphRef}>
-            I Design the look and feel (UI)
+            I Design the look and feel <em>(UI)</em>
             <br />
-            of a digital product (Product Design)
+            of a digital product <em>(Product Design)</em>
             <br />
-            for the end-users to improve their experiences (UX)
+            for the end-users to improve their experiences <em>(UX)</em>
             <br />
-            during their interaction with the product (IxD)
+            during their interaction with the product <em>(IxD)</em>
             <br />
-            while aligning with business needs and goals (Strategy),
+            while aligning with business needs and goals <em>(Strategy)</em>,
             <br />
-            supported by thorough UX Research, testing (UXR).
+            supported by thorough UX Research, testing <em>(UXR)</em>.
             <br />
             <br />I also specialize in Video Editing, Graphic Designing &
             Branding and I am passionate about new trends in technology like AI,

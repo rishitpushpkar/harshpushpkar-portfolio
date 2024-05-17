@@ -1,6 +1,6 @@
 .allProContainer{
   margin: 8% auto;
-
+  overflow-x: hidden;
   color: white;
 }
 

@@ -29,6 +29,13 @@
     width: 54%;
   }
   
+  .whatIDoSection article div p em{
+    color: #454545;
+    font-size: 3.2rem;
+    font-weight: 800;
+
+  }
+
 .buttonContainer{
   display: flex;
   justify-content: flex-end;
