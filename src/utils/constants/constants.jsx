@@ -12,6 +12,13 @@ import pushpkar_studios_logo from "../../assets/images/PushpkarStudio_logo.svg";
 // Project Resources
 import projectVideo1 from "../../assets/videos/Amaps.mp4";
 import projectVideo2 from "../../assets/videos/CypherDesign.mp4";
+import projectVideo3 from "../../assets/videos/Aicare.mp4";
+import projectVideo4 from "../../assets/videos/Centre.mp4";
+import projectVideo5 from "../../assets/videos/EPR.mp4";
+import projectVideo6 from "../../assets/videos/Legacy.mp4";
+import projectVideo7 from "../../assets/videos/MSS.mp4";
+import projectVideo8 from "../../assets/videos/Nuetek.mp4";
+import projectVideo9 from "../../assets/videos/Tkw.mp4";
 
 // ############################################### DESIGN PROCESS SECTION ##################################################
 const designProcessList = [
@@ -88,15 +95,19 @@ const experiences = [
     companyLogo: pushpkar_studios_logo,
     role: "EDITOR & DESIGNER",
     date: "Aug 2021 - Aug 2022",
-    projects: ["TKW Websites", "Cypher Design", "Centre", "EPR"],
-    description: `Product Designer at The Kabadiwala, contributing to a technology-driven company
-                    specializing in Smart Waste Management using a SaaS model. Conducted comprehensive research on operational
-                    challenges in Material Recovery Facilities (MRF) and warehouses, identifying market needs in waste management.
-                     Led ideation sessions, evaluated solutions, and collaborated with the tech team to validate and implement
-                    efficient solutions. Established the in-house design system, Cypher Design, and crafted user-friendly web
-                    pages and applications adhering to WCAG 2 standards. Created working prototypes, ensuring seamless
-                    collaboration with developers for accurate implementation. Provided creative oversight for the marketing
-                    team and fulfilled diverse design requirements.`,
+    projects: [
+      "Wedding Highlights",
+      "Pre-Wedding",
+      "Wedding Invitations",
+      "Promotional Videos",
+      "Commercial Highlights",
+      "YouTube Videos",
+    ],
+    description: `Dedicated contributor to Pushpkar Studio, a family-owned business established in 1996, specializing in videography, photography, and editing services. With over 7 years of experience, I played a vital role as a Video Editor, Content Creator, and Designer.
+
+    Edited diverse projects, including Wedding Films, Pre-wedding Videos, Wedding Invitations, Highlights, Commercial Ads, Promos, Institutional Videos, YouTube content, and Event Slideshows.
+    Collaborated closely with clients to understand their vision and deliver tailored, high-quality productions.
+    Stayed updated on industry trends, incorporating new techniques and technologies into editing processes.`,
   },
 ];
 
@@ -152,7 +163,7 @@ const allProjects = [
     year: "2023",
     description:
       "The Kabadiwala, developed by ASAR Green Kabadi Pvt. Ltd., embodies innovation in waste management through a sophisticated SaaS (Software as a Service) platform. As a key member of the team, I spearheaded the creation and design of web pages while crafting compelling visual content including images, videos, graphics, and animations. My role extended beyond mere design; I fostered seamless collaboration across departments, ensuring our output consistently met the highest standards of quality and coherence.",
-    video: projectVideo1,
+    video: projectVideo9,
     buttonLabel: "Visit",
     btnLink: "https://www.thekabadiwala.com/",
   },
@@ -163,7 +174,7 @@ const allProjects = [
     year: "2022",
     description:
       "Zero Centre is the ultimate app for effortless scrap inventory management. With its intuitive interface, Zero Centre empowers you to oversee multiple centers, manage personnel and roles, handle transactions, streamline logistics, and generate seamless billing and invoicing. ",
-    video: projectVideo1,
+    video: projectVideo4,
     buttonLabel: "See Project",
     btnLink:
       "https://play.google.com/store/apps/details?id=ooo.gozero.centre&hl=en_IN&gl=US&pli=1",
@@ -175,7 +186,7 @@ const allProjects = [
     year: "2021",
     description:
       "Zero EPR is a SaaS platform providing comprehensive EPR compliance management solutions. Specializing in handling various mandatory waste materials, Zero EPR facilitates seamless end-to-end management processes. Their services streamline waste management, catalyzing economic growth while fostering the transition towards a circular economy.",
-    video: projectVideo1,
+    video: projectVideo5,
     buttonLabel: "See Project",
     btnLink: "https://www.scrapr.app/epr-calculator",
   },
@@ -186,7 +197,7 @@ const allProjects = [
     year: "2020",
     description:
       "As a part of my UX Design course (From Google), this project helped me understand the UX design fundamentals and key concepts. Mathur Sweets and Snacks (MSS) stands as a prominent fast-food chain in city, boasting five strategically positioned branches in the bustling commercial hubs of the city. With options for in-store dining and convenient door-to-door delivery via phone orders, MSS ensures that its tantalizing offerings are accessible to all. my goal was to design an app for MSS that allows users to book orders and track them live easily.",
-    video: projectVideo1,
+    video: projectVideo7,
     buttonLabel: "See Case Study",
     btnLink:
       "https://drive.google.com/file/d/1ueZpEMvWGOEZoyuZ1-l2Zb6zfA317v3I/view",
@@ -198,7 +209,7 @@ const allProjects = [
     year: "2024",
     description:
       "Legacy Sports Club is a premier sports academy dedicated to nurturing talent and fostering a culture of excellence in sports. Situated amidst lush greenery, our state-of-the-art facility boasts a range of world-class amenities, including a futsal ground for fast-paced action, a cricket school for honing batting and bowling skills, and a football ground where dreams take flight with every kick. My role was to design their logo and branding and other designs like banners and social media posts.",
-    video: projectVideo1,
+    video: projectVideo6,
     buttonLabel: "Visit",
     btnLink: "https://www.instagram.com/legacy_sports_club/",
   },
@@ -209,7 +220,7 @@ const allProjects = [
     year: "2023",
     description:
       "Aicare is a Healthcare Analytics software powered by Artificial Intelligence. This software helps healthcare professionals and stakeholders to feed, clean, and analyze healthcare data to get necessary actionable insights. ",
-    video: projectVideo1,
+    video: projectVideo3,
     buttonLabel: "See Research Study",
     btnLink:
       "https://harshpushpkar.notion.site/AICARE-3c1b6c92d19f4e1eb7457ac0141337b5",
@@ -221,7 +232,7 @@ const allProjects = [
     year: "2020",
     description:
       "Nuetek Electronics is a leading electronics manufacturer, renowned for its diverse range of products including smartphones, laptops, televisions, and music systems. With departments covering production, design, finance, distribution, and corporate management, Nuetek operates seamlessly across multiple markets. Recognizing their environmental responsibility, the company has intensified its focus on sustainability, embracing principles of the circular economy, and enhancing corporate social responsibility (CSR) policies. Adhering to governmental regulations such as Extended Producer Responsibility (EPR), Nuetek maintains stringent operational standards to mitigate environmental impact.",
-    video: projectVideo1,
+    video: projectVideo8,
     buttonLabel: "See Case Study",
     btnLink:
       "https://harshpushpkar.notion.site/Nuetek-bcc2c58c8c5245b4839680a2bb5cfc1b",

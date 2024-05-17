@@ -14,12 +14,14 @@
 }
 
 .allProContainer h1{
-    font-size: 20rem;
+    font-size: 19.6rem;
     font-weight: bold;
     color: #454545;
     overflow-x: hidden;
     overflow-y: hidden;
     white-space: nowrap;
+    
+    
 }
 
 .allProContainer section img{

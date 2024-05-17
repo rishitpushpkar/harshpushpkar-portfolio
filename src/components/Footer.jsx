@@ -5,9 +5,9 @@ export default function Footer() {
   const myContactInfo = {
     email: "hello@harshpushpkar.com",
     linkedin: "https://www.linkedin.com/in/harshpushpkar",
-    behance: "",
-    twitter: "",
-    instagram: "",
+    behance: "https://www.behance.net/harshpushpkar",
+    twitter: "https://twitter.com/harshpushpkar",
+    instagram: "https://www.instagram.com/harshpushpkar",
   };
 
   return (
