@@ -19,6 +19,7 @@ import projectVideo6 from "../../assets/videos/Legacy.mp4";
 import projectVideo7 from "../../assets/videos/MSS.mp4";
 import projectVideo8 from "../../assets/videos/Nuetek.mp4";
 import projectVideo9 from "../../assets/videos/Tkw.mp4";
+import projectVideo10 from "../../assets/videos/Apron.mp4";
 
 // ############################################### DESIGN PROCESS SECTION ##################################################
 const designProcessList = [
@@ -145,7 +146,7 @@ const projects = [
     year: "2024",
     description:
       "Apron connects travelers and individuals exploring new destinations with a temporary solution for their culinary needs. For individuals far from home, it provides access to kitchens for rent, enabling them to cook meals aligned with their dietary preferences and tastes. On the other side, homeowners can monetize their kitchen spaces by offering them for temporary rentals, creating a seamless and mutually beneficial arrangement. ",
-    video: projectVideo2,
+    video: projectVideo10,
     buttonLabel: "See Case Study",
     btnLink:
       "https://www.figma.com/proto/MossOx6VgYNV1apyOJqaAd/Apron---Product-Design-%26-UX-Case-Study?type=design&node-id=474-7737&t=0BlcLeW52It18sy0-0&scaling=contain&page-id=474%3A6366&starting-point-node-id=474%3A6367",

@@ -26,6 +26,8 @@
     z-index: 1;
 }
 
+
+
 .experienceSection h1{
     left: -65%;
 }
@@ -50,20 +52,7 @@
     text-align: end;
 }
 
-@media screen and (max-width: 768px) {
-    .aboutSection div p{
-      font-size: 2.4rem;
-      padding: 2rem;
-      text-align: start !important;
-    }
-    .aboutSection h1,.experienceSection h1,.moreThingsSection h1{
-        font-size: 8rem;
-    }
-    .aboutSection,.experienceSection,.moreThingsSection{
-        padding-top: 10rem !important;
-    }
-    
-}
+
 
   .experienceSection{
     color: #FFFFFF;
@@ -150,31 +139,7 @@ font-weight: 700;
     font-weight: 300;
 }
 
-@media screen and (max-width: 768px) {
-    .company_row h2{
-        font-size: 2.4rem;
-    }
-    .company_row div h3{
-        font-size: 2.4rem;
-    }
-    .company_row div p{
-        font-size: 1.6rem;
-    }
-    .company_projects ul h4{
-        font-size: 1.6rem;
-    }
-    .company_projects ul li{
-        font-size: 1.6rem;
-    }
-    .company_description {
-        font-size: 1.6rem;
-    }
 
-    .company_projects ul{
-        gap: 0.5rem;
-    }
-    
-}
 
 /* ################################## */
 
@@ -285,6 +250,18 @@ font-weight: 700;
 }
 
 
+@media screen and (max-width: 1264px){
+
+    .aboutSection h1,.experienceSection h1,.moreThingsSection h1{
+        font-size: 15vw;
+     
+    }
+    .mts_2 div{
+        flex-direction: column-reverse;
+    }
+    
+}
+
 
 @media screen and (max-width: 980px){
     article div:first-of-type img{
@@ -309,11 +286,58 @@ font-weight: 700;
     .myPic5Container img{
         width: 100%;
     }
+    
+    .aboutSection h1,.experienceSection h1,.moreThingsSection h1{
+        font-size: 15vw;
+     
+    }
+
 
 }
-@media screen and (max-width: 1264px){
-    .mts_2 div{
-        flex-direction: column-reverse;
+
+@media screen and (max-width: 768px) {
+    .company_row h2{
+        font-size: 2.4rem;
     }
+    .company_row div h3{
+        font-size: 2.4rem;
+    }
+    .company_row div p{
+        font-size: 1.6rem;
+    }
+    .company_projects ul h4{
+        font-size: 1.6rem;
+    }
+    .company_projects ul li{
+        font-size: 1.6rem;
+    }
+    .company_description {
+        font-size: 1.6rem;
+    }
+
+    .company_projects ul{
+        gap: 0.5rem;
+    }
+
+    .aboutSection h1,.experienceSection h1,.moreThingsSection h1{
+        left: 0;
+        font-size: 15vw;
+    }
+
+.experienceSection h1{
+    left: -90vw;
+}
+
+    .aboutSection div p{
+        font-size: 2.4rem;
+        padding: 2rem;
+        text-align: start !important;
+      }
+  
+      .aboutSection,.experienceSection,.moreThingsSection{
+          padding-top: 10rem !important;
+      }
+
     
 }
+

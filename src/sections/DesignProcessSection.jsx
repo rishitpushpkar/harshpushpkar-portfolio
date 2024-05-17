@@ -21,7 +21,7 @@ export default function DesignProcessSection() {
     offset: ["start end", "end start"],
   });
 
-  const sm = useTransform(scrollYProgress, [0, 4], [200, -2500]);
+  const sm = useTransform(scrollYProgress, [0, 8], [200, -2500]);
 
   return (
     <div className="OuterContainer" ref={ref}>
