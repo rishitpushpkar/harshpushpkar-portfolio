@@ -4,14 +4,15 @@ import backgroundAnimation from "../jquery/backgroundAnimation";
 
 export default function HeroSection() {
   useEffect(() => {
-    const container = document.getElementById("container"); // Get the container element
-    backgroundAnimation(container); // Pass the container element to the animation function
+    backgroundAnimation();
   }, []);
   return (
     <>
       <section className="heroSection">
         <main>
-          <div id="container"></div>
+          <div id="container">
+            <canvas></canvas>
+          </div>
           <h1>
             I&#x2019;m Harsh and
             <em> I craft digital experiences & visual stories</em>, through my
