@@ -33,7 +33,7 @@
 }
 
 .moreThingsSection h1{
-    left: -180%;
+    left: -330rem;
 }
 
 .myPicContainer img{
@@ -250,6 +250,25 @@ font-weight: 700;
 }
 
 
+@media screen and (max-width: 1600px){
+    .mts_1 div{
+        flex-direction: column;
+       
+    }
+    .mts_3 div{
+        flex-direction: column;
+    }
+    .mts_1 div p,.mts_3 div p{
+     text-align: justify;
+       
+    }
+    .myPic2Container {
+       display: flex;
+       justify-content: center;
+       margin: 0;
+    }
+}
+
 @media screen and (max-width: 1264px){
 
     .aboutSection h1,.experienceSection h1,.moreThingsSection h1{
@@ -259,7 +278,18 @@ font-weight: 700;
     .mts_2 div{
         flex-direction: column-reverse;
     }
+    .mts_2 div p{
+        text-align: justify;
+          
+       }
     
+}
+
+@media screen and (max-width: 1200px){
+    .mts_4 div p{
+        text-align: justify;
+          
+       }
 }
 
 
@@ -291,6 +321,8 @@ font-weight: 700;
         font-size: 15vw;
      
     }
+
+          
 
 
 }
@@ -326,6 +358,10 @@ font-weight: 700;
 
 .experienceSection h1{
     left: -90vw;
+}
+
+.moreThingsSection h1{
+    left: -355rem;
 }
 
     .aboutSection div p{

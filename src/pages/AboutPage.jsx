@@ -97,7 +97,7 @@ export default function AboutPage() {
             ref={secondParagraphRef}
           >
             <div className="row">
-              <div className="myPic2Container col-lg-4">
+              <div className="myPic2Container col-xl-4">
                 <img src={mypic_2} alt="My Picture 2" />
               </div>
               <p className="col-lg-8">
@@ -150,7 +150,7 @@ export default function AboutPage() {
             ref={forthParagraphRef}
           >
             <div className="row">
-              <div className="myPic4Container col-lg-4">
+              <div className="myPic4Container col-xl-4">
                 <img src={sunSetPic} alt="Sun Set" />
                 <img src={CyclingPic} alt="Cycling" />
               </div>
@@ -171,13 +171,13 @@ export default function AboutPage() {
             ref={fifthParagraphRef}
           >
             <div className="row">
-              <p className="col-lg-8 order-2 order-lg-1">
+              <p className="col-xl-8 order-2 order-xl-1">
                 And yes, I do have a sweet tooth—I find solace in the world of
                 ice cream and desserts. So, let&apos;s connect and create
                 something extraordinary together, fuelled by passion,
                 creativity, and a sprinkle of sweetness!
               </p>
-              <div className="myPic5Container col-lg-4 order-1 order-lg-2">
+              <div className="myPic5Container col-xl-4 order-1 order-xl-2">
                 <img src={iceCreamPic} alt="Ice Cream" />
               </div>
             </div>
