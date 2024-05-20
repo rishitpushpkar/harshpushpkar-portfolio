@@ -3,6 +3,7 @@ import { useRef } from "react";
 import "../css/DesignProcess.css";
 import { useInView } from "react-intersection-observer";
 import { motion, useScroll, useTransform } from "framer-motion";
+import useSlideOnScroll from "../utils/hooks/useSlideOnScroll";
 
 export default function DesignProcessSection() {
   const [ref, inView] = useInView({ threshold: 0.1 }); // Adjust the threshold value
@@ -25,6 +26,26 @@ export default function DesignProcessSection() {
 
   return (
     <div className="OuterContainer" ref={ref}>
+      <section className="howIDoSection">
+        <motion.h1 animate={useSlideOnScroll()}>HOW I DO</motion.h1>
+        <article>
+          <div>
+            <p>
+              I begin by asking simple questions such as &quot;what,&quot;
+              &quot;why,&quot; and &quot;whom.&quot; This helps establish the
+              foundation for my design projects and better understand the needs
+              and goals. Questions like &quot;how&quot; come later, once there
+              is a sufficient understanding of the goal. Once all questions are
+              answered, I explore possible solutions. This is where numerous
+              ideas emerge. The ideas begin to take shape in the design process,
+              in the form of working prototypes that mimic the actual product.
+              However, the story is far from over. As we know, change is
+              inevitable and necessary for refinement. Therefore, feedback is
+              crucial at every stage of the process.
+            </p>
+          </div>
+        </article>
+      </section>
       {designProcessList.map((process) => (
         <section
           className="feedbackContainer designProcessContainer"

@@ -7,6 +7,7 @@ import { projects } from "../utils/constants/constants";
 import useSlideOnScroll from "../utils/hooks/useSlideOnScroll";
 import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
+import Button from "../components/Button/Button";
 
 export default function WhatIDidSection() {
   useSlideOnScroll();
@@ -144,20 +145,9 @@ export default function WhatIDidSection() {
                     <img src={project.image} alt="Project Image" />
                   )}
                   {activeSlideIndex === index && (
-                    <button id="caseStudyBtn">
-                      <Link to={activeSlideLink}>
-                        <div className="scene">
-                          <div className="cube">
-                            <span className="side top">
-                              {project.buttonLabel} &gt;&gt;&gt;
-                            </span>
-                            <span className="side front">
-                              {project.buttonLabel} &gt;&gt;&gt;
-                            </span>
-                          </div>
-                        </div>
-                      </Link>
-                    </button>
+                    <Link to={activeSlideLink}>
+                      <Button title={project.buttonLabel} />
+                    </Link>
                   )}
                 </div>
 

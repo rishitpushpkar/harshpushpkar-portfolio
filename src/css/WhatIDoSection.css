@@ -7,145 +7,66 @@
   font-weight: 900;
   white-space: nowrap;
   z-index: 1;
-  }
-  
+}
+
+.whatIDoSection article p {
+  font-size: 3.2rem;
+  font-weight: 300;
+}
+
+.whatIDoSection {
+  color: white;
+  padding-top: 28rem;
+  padding-bottom: 12dvb;
+  position: relative;
+  overflow-x: clip;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 100vh;
+}
+
+.whatIDoSection article div {
+  width: 54%;
+}
+
+.whatIDoSection article div p em {
+  color: #454545;
+  font-size: 3.2rem;
+  font-weight: 800;
+}
+
+.whatIDoSection article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  margin: 4rem 0;
+}
+
+.buttonContainer {
+  position: relative;
+  padding-right: 20rem;
+
+  margin: 0 auto;
+  width: 85%;
+}
+
+@media screen and (max-width: 768px) {
   .whatIDoSection article p {
-    font-size: 3.2rem;
+    font-size: 2.4rem;
     font-weight: 300;
   }
-  
-  .whatIDoSection {
-    color: white;
-    padding-top: 28rem;
-    position: relative;
-    overflow-x: clip;
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    min-height: 100vh;
-  }
-  
   .whatIDoSection article div {
-    width: 54%;
-  }
-  
-  .whatIDoSection article div p em{
-    color: #454545;
-    font-size: 3.2rem;
-    font-weight: 800;
-
+    width: 80%;
   }
 
-.buttonContainer{
-  display: flex;
-  justify-content: flex-end;
-  margin: 4rem 0;
-
+  .whatIDoSection h1 {
+    font-size: 8rem;
+    left: -80rem;
+  }
+  .whatIDoSection {
+    padding-top: 10rem !important;
+  }
 }
-
-.buttonContainer div:first-of-type{
-flex-basis: 65%;
-}
-
-.buttonContainer div:nth-of-type(2){
-  flex-basis: 35%;
-  display: flex;
-  justify-items: start;
-  }
-  
-  .buttonContainer div:nth-of-type(2) button{
-background-color: transparent;
-border: none;
-    }
-    
-
-  .whatIDoSection article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 4rem;
-    margin: 4rem 0;
-  }
-  
-  .whatIDoSection button {
-    padding: 1.6rem 2.4rem;
-  
-    font-size: 2rem;
-    font-weight: 600;
-  }
-  
-  /* ##################### Button Animation ##################### */
-  
-  .scene {
-    width: 20em;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .cube {
-    color: #ccc;
-    cursor: pointer;
-    transition: all 0.85s cubic-bezier(0.17, 0.67, 0.14, 0.93);
-    transform-style: preserve-3d;
-    transform-origin: 100% 50%;
-    width: 10em;
-    height: 4em;
-  }
-  
-  .cube:hover {
-    transform: rotateX(-90deg);
-  }
-  
-  .side {
-    box-sizing: border-box;
-    position: absolute;
-    display: inline-block;
-    height: 4em;
-    width: 14em;
-    text-align: center;
-    text-transform: uppercase;
-    padding-top: 1.3em;
-    font-weight: bold;
-  }
-  
-  .top {
-    background: rgb(255, 255, 255);
-    color: #222229;
-    transform: rotateX(90deg) translate3d(0, 0, 2em);
-    box-shadow: inset 0 0 0 5px #fff;
-  }
-  
-  .front {
-    background: #f00;
-    color: #000;
-    transform: translate3d(0, 0, 2em);
-    font-size: 20px;
-    font-weight: 600;
-  }
-  
-  @media screen and (max-width: 768px){
-    .whatIDoSection article p {
-      font-size: 2.4rem;
-      font-weight: 300;
-    }
-    .whatIDoSection article div{
-      width: 80%;
-    }
-
-    .whatIDoSection h1 {
-      font-size: 8rem;
-      left: -80rem;
-    }
-    .whatIDoSection{
-      padding-top: 10rem !important;
-    }
-  }
-
-  @media screen and (max-width: 1624px){
-
-    .whatIDoSection h1 {
-      left: -80rem;
-    }
-
-  }

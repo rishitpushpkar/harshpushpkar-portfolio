@@ -34,8 +34,10 @@ export default function AboutPage() {
   return (
     <>
       <div className="aboutPageContainer ">
+        <motion.h1 className="about_heading1" animate={useSlideOnScroll()}>
+          THIS IS ME
+        </motion.h1>
         <section className="aboutSection">
-          <motion.h1 animate={useSlideOnScroll()}>THIS IS ME</motion.h1>
           <div className="row align-items-center ">
             <motion.p
               className="col-lg-8 text-center text-lg-end order-2 order-lg-1 "
@@ -53,8 +55,10 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+        <motion.h1 className="experience_heading1" animate={useSlideOnScroll()}>
+          EXPERIENCE
+        </motion.h1>
         <section className="experienceSection">
-          <motion.h1 animate={useSlideOnScroll()}>EXPERIENCE</motion.h1>
           {experiences.map((experience, index) => {
             return (
               <article className="row" key={index}>
@@ -89,8 +93,10 @@ export default function AboutPage() {
             );
           })}
         </section>
+        <motion.h1 className="moreThings_heading1" animate={useSlideOnScroll()}>
+          MORE THINGS
+        </motion.h1>
         <section className="moreThingsSection">
-          <motion.h1 animate={useSlideOnScroll()}>MORE THINGS</motion.h1>
           <motion.article
             className="mts_1"
             data-splitting="words"

@@ -4,6 +4,7 @@ import useMagicalText from "../utils/hooks/useMagicalText";
 import useSlideOnScroll from "../utils/hooks/useSlideOnScroll";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
+import Button from "../components/Button/Button";
 
 export default function WhatIDoSection() {
   const paragraphRef = useRef(null);
@@ -12,7 +13,7 @@ export default function WhatIDoSection() {
   // ##############Scroll LInked Animation################
   useSlideOnScroll();
   return (
-    <section className="whatIDoSection">
+    <section id="az" className="whatIDoSection">
       <motion.h1 animate={useSlideOnScroll()}>WHAT I DO</motion.h1>
       <article>
         <div>
@@ -36,19 +37,9 @@ export default function WhatIDoSection() {
         </div>
       </article>
       <div className="buttonContainer">
-        <div></div>
-        <div>
-          <button>
-            <Link to="/about">
-              <div className="scene">
-                <div className="cube">
-                  <span className="side top">WANNA KNOW MORE?</span>
-                  <span className="side front">WANNA KNOW MORE?</span>
-                </div>
-              </div>
-            </Link>
-          </button>
-        </div>
+        <Link to="/about">
+          <Button title="WANNA KNOW MORE ?" btnColor={"btnRed"} />
+        </Link>
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import downArrow from "../assets/images/down_arrow.svg";
 import backgroundAnimation from "../jquery/backgroundAnimation";
+import { HashLink } from "react-router-hash-link";
 
 export default function HeroSection() {
   useEffect(() => {
@@ -19,9 +20,13 @@ export default function HeroSection() {
             designs.
           </h1>
         </main>
-        <div className="downArrowBox">
+        <HashLink
+          className="downArrowBox"
+          to="#az"
+          scroll={(el) => el.scrollIntoView({ behavior: "auto", block: "end" })}
+        >
           <img src={downArrow} alt="Down Arrow" />
-        </div>
+        </HashLink>
       </section>
     </>
   );
