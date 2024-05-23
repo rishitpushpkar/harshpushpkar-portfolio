@@ -69,7 +69,7 @@
 @media (max-width: 796px) {
   .heroSection main h1 {
     font-size: 5.8rem;
-    margin-top: -50%;
+    margin-top: -35vh;
   }
   .heroSection main {
     width: 80%;
