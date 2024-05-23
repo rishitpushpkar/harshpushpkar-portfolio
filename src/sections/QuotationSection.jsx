@@ -4,7 +4,6 @@ import { useInView } from "react-intersection-observer";
 
 export default function QuotationSection() {
   const [ref, inView] = useInView({ threshold: 0.1 });
-  console.log(inView);
   return (
     <section className="quotationSectionContainer">
       <div className="px-2">

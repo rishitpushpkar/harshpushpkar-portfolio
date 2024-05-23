@@ -20,6 +20,10 @@ const backgroundAnimation = () => {
   let pointers = [];
   let splatStack = [];
 
+  function isMobile() {
+    return window.innerWidth <= 768;
+  }
+
   const { gl, ext } = getWebGLContext(canvas);
 
   function getWebGLContext(canvas) {
@@ -639,8 +643,12 @@ const backgroundAnimation = () => {
   update();
 
   function update() {
+    if (isMobile()) {
+      // Skip animation updates on mobile
+      requestAnimationFrame(update);
+      return;
+    }
     resizeCanvas();
-
     const dt = Math.min((Date.now() - lastTime) / 1000, 0.016);
     lastTime = Date.now();
 
@@ -648,7 +656,43 @@ const backgroundAnimation = () => {
 
     if (splatStack.length > 0) multipleSplats(splatStack.pop());
 
+    // Update velocity and density
     advectionProgram.bind();
+    updateAdvectionProgram(dt, velocity, density);
+
+    // Update pointers
+    updatePointers();
+
+    // Update curl
+    curlProgram.bind();
+    updateCurlProgram(velocity, curl);
+
+    // Update vorticity
+    vorticityProgram.bind();
+    updateVorticityProgram(dt, velocity, curl);
+
+    // Update divergence
+    divergenceProgram.bind();
+    updateDivergenceProgram(velocity);
+
+    // Update pressure
+    clearPressure();
+    pressureProgram.bind();
+    updatePressureProgram(pressure, divergence);
+
+    // Subtract pressure gradient
+    gradienSubtractProgram.bind();
+    updateGradientSubtractProgram(pressure, velocity);
+
+    // Display result
+    gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
+    displayProgram.bind();
+    displayResult(density);
+
+    requestAnimationFrame(update);
+  }
+
+  function updateAdvectionProgram(dt, velocity, density) {
     gl.uniform2f(
       advectionProgram.uniforms.texelSize,
       1.0 / textureWidth,
@@ -672,7 +716,9 @@ const backgroundAnimation = () => {
     );
     blit(density.write[1]);
     density.swap();
+  }
 
+  function updatePointers() {
     for (let i = 0; i < pointers.length; i++) {
       const pointer = pointers[i];
       if (pointer.moved) {
@@ -680,8 +726,9 @@ const backgroundAnimation = () => {
         pointer.moved = false;
       }
     }
+  }
 
-    curlProgram.bind();
+  function updateCurlProgram(velocity, curl) {
     gl.uniform2f(
       curlProgram.uniforms.texelSize,
       1.0 / textureWidth,
@@ -689,8 +736,9 @@ const backgroundAnimation = () => {
     );
     gl.uniform1i(curlProgram.uniforms.uVelocity, velocity.read[2]);
     blit(curl[1]);
+  }
 
-    vorticityProgram.bind();
+  function updateVorticityProgram(dt, velocity, curl) {
     gl.uniform2f(
       vorticityProgram.uniforms.texelSize,
       1.0 / textureWidth,
@@ -702,8 +750,9 @@ const backgroundAnimation = () => {
     gl.uniform1f(vorticityProgram.uniforms.dt, dt);
     blit(velocity.write[1]);
     velocity.swap();
+  }
 
-    divergenceProgram.bind();
+  function updateDivergenceProgram(velocity) {
     gl.uniform2f(
       divergenceProgram.uniforms.texelSize,
       1.0 / textureWidth,
@@ -711,7 +760,9 @@ const backgroundAnimation = () => {
     );
     gl.uniform1i(divergenceProgram.uniforms.uVelocity, velocity.read[2]);
     blit(divergence[1]);
+  }
 
+  function clearPressure() {
     clearProgram.bind();
     let pressureTexId = pressure.read[2];
     gl.activeTexture(gl.TEXTURE0 + pressureTexId);
@@ -720,15 +771,16 @@ const backgroundAnimation = () => {
     gl.uniform1f(clearProgram.uniforms.value, config.PRESSURE_DISSIPATION);
     blit(pressure.write[1]);
     pressure.swap();
+  }
 
-    pressureProgram.bind();
+  function updatePressureProgram(pressure, divergence) {
     gl.uniform2f(
       pressureProgram.uniforms.texelSize,
       1.0 / textureWidth,
       1.0 / textureHeight
     );
     gl.uniform1i(pressureProgram.uniforms.uDivergence, divergence[2]);
-    pressureTexId = pressure.read[2];
+    let pressureTexId = pressure.read[2];
     gl.uniform1i(pressureProgram.uniforms.uPressure, pressureTexId);
     gl.activeTexture(gl.TEXTURE0 + pressureTexId);
     for (let i = 0; i < config.PRESSURE_ITERATIONS; i++) {
@@ -736,8 +788,9 @@ const backgroundAnimation = () => {
       blit(pressure.write[1]);
       pressure.swap();
     }
+  }
 
-    gradienSubtractProgram.bind();
+  function updateGradientSubtractProgram(pressure, velocity) {
     gl.uniform2f(
       gradienSubtractProgram.uniforms.texelSize,
       1.0 / textureWidth,
@@ -747,13 +800,11 @@ const backgroundAnimation = () => {
     gl.uniform1i(gradienSubtractProgram.uniforms.uVelocity, velocity.read[2]);
     blit(velocity.write[1]);
     velocity.swap();
+  }
 
-    gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
-    displayProgram.bind();
+  function displayResult(density) {
     gl.uniform1i(displayProgram.uniforms.uTexture, density.read[2]);
     blit(null);
-
-    requestAnimationFrame(update);
   }
 
   function splat(x, y, dx, dy, color) {
@@ -832,7 +883,7 @@ const backgroundAnimation = () => {
         pointer.y = touches[i].pageY;
       }
     },
-    false
+    { passive: true }
   );
 
   canvas.addEventListener("mousemove", () => {
@@ -843,23 +894,27 @@ const backgroundAnimation = () => {
         : [0, 0, 0.8 + Math.random() * 0.2]; // Brighter Blue color
   });
 
-  canvas.addEventListener("touchstart", (e) => {
-    e.preventDefault();
-    const touches = e.targetTouches;
-    for (let i = 0; i < touches.length; i++) {
-      if (i >= pointers.length) pointers.push(new pointerPrototype());
+  canvas.addEventListener(
+    "touchstart",
+    (e) => {
+      e.preventDefault();
+      const touches = e.targetTouches;
+      for (let i = 0; i < touches.length; i++) {
+        if (i >= pointers.length) pointers.push(new pointerPrototype());
 
-      pointers[i].id = touches[i].identifier;
-      pointers[i].down = true;
-      pointers[i].x = touches[i].pageX;
-      pointers[i].y = touches[i].pageY;
-      pointers[i].color = [
-        Math.random() + 0.2,
-        Math.random() + 0.2,
-        Math.random() + 0.2,
-      ];
-    }
-  });
+        pointers[i].id = touches[i].identifier;
+        pointers[i].down = true;
+        pointers[i].x = touches[i].pageX;
+        pointers[i].y = touches[i].pageY;
+        pointers[i].color = [
+          Math.random() + 0.2,
+          Math.random() + 0.2,
+          Math.random() + 0.2,
+        ];
+      }
+    },
+    { passive: true }
+  );
 
   window.addEventListener("mouseleave", () => {
     pointers[0].down = false;
