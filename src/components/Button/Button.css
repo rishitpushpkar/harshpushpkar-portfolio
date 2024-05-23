@@ -120,7 +120,8 @@
   #caseStudyBtn {
     width: 40vw;
   }
-  #caseStudyBtn .scene .cube .front {
+  #caseStudyBtn .scene .cube .front,
+  #caseStudyBtn .scene .cube .top {
     font-size: 14px;
     font-weight: 600;
   }

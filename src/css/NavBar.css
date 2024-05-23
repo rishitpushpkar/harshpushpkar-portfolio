@@ -1,5 +1,4 @@
-
-header{
+header {
   margin-top: 3%;
   z-index: 100;
   position: relative;
@@ -9,53 +8,45 @@ header nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-
 }
 
-
-.navList li a{
+.navList li a {
   list-style: none;
   text-decoration: none;
   color: white;
 }
 
-.navList{
+.navList {
   margin-bottom: 0;
 }
 
 .menu-item {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .menu-item h6 {
-    margin: 0;
-  }
-  
-  .menu-item .wee {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #f00;
-    transition: width 0.3s ease;
-  }
-  
-  .menu-item:hover .wee {
-    width: 100%;
-  }
+  position: relative;
+  display: inline-block;
+}
 
-  
-@media screen and (max-width: 500px){
-  header nav{
+.menu-item h6 {
+  margin: 0;
+}
+
+.menu-item .wee {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #f00;
+  transition: width 0.3s ease;
+}
+
+.menu-item:hover .wee {
+  width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  header nav {
     flex-direction: column;
     justify-content: start;
     gap: 1rem;
   }
-  .navList{
-    margin-left: 1.5rem;
-  }
 }
-
-
