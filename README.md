@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -11,3 +12,6 @@ Currently, two official plugins are available:
 # Portfolio-Website
 Amazing Portfolio of a Product Designer
 >>>>>>> origin/master
+=======
+# portfolio-2
+>>>>>>> 668a06832410f23e877dd9a9fa12449b93275f46
