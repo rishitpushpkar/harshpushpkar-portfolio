@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import NavBar from "./components/NavBar";
 import AboutPage from "./pages/AboutPage";
@@ -10,7 +10,7 @@ import ScrollToTop from "./utils/ScrollToTop";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <NavBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -19,7 +19,7 @@ function App() {
         </Routes>
         <Footer />
         <ScrollToTop />
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
