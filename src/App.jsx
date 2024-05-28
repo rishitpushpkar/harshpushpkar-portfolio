@@ -8,9 +8,10 @@ import AllProjectPage from "./pages/AllProjectPage";
 import ScrollToTop from "./utils/ScrollToTop";
 
 function App() {
+  console.log(`${import.meta.env.VITE_DEPLOY_TARGET}`);
   return (
     <>
-      <BrowserRouter basename="/">
+      <BrowserRouter basename="/Portfolio-Website">
         <NavBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
