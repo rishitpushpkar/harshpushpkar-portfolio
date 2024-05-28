@@ -11,7 +11,7 @@ function App() {
   console.log(`${import.meta.env.VITE_DEPLOY_TARGET}`);
   return (
     <>
-      <BrowserRouter basename="/Portfolio-Website">
+      <BrowserRouter>
         <NavBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
