@@ -1,6 +1,6 @@
 {
   "name": "harsh-pushpkar",
-  "homepage": "https://rishitpushpkar.github.io/Portfolio-Website/",
+  "homepage": "https://rishitpushpkar.github.io/harshpushpkar-portfolio/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,13 +9,13 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "build": "vite build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@splidejs/react-splide": "^0.7.12",
     "autoprefixer": "^10.4.18",
     "framer-motion": "^11.0.3",
-    "gh-pages": "^6.1.1",
     "gsap": "^3.12.5",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
@@ -33,6 +33,7 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
+    "gh-pages": "^6.1.1",
     "vite": "^5.1.0"
   }
 }
