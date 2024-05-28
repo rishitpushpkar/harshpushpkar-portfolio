@@ -10,7 +10,7 @@ import ScrollToTop from "./utils/ScrollToTop";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/">
         <NavBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
